@@ -1,16 +1,6 @@
-name,stream,language,notes
-K4ro FM,https://zeno.fm/radio/k4ro-fm/,Kurdish,Music / Hits
-Govend,https://zeno.fm/radio/govend/,Kurdish,Folk / Traditional
-Svan Perwer Radio,https://zeno.fm/radio/svan-perwer/,Kurdish,Artist / Folk
-Radio Duhok 88.9,https://zeno.fm/radio/radio-duhok-88-9/,Kurdish,News / Talk
-Dawat Radio,https://zeno.fm/radio/dawat-radio/,Kurdish,Religious / Culture
-Welat FM,https://zeno.fm/radio/welat-fm/,Kurdish,Music / General
-Dengi Kurdsat,https://zeno.fm/radio/dengi-kurdsat/,Kurdish,News / Talk
-Shady FM Kurdish,https://zeno.fm/radio/shady-fm-kurdish/,Kurdish,General / Music
-Yagrto Radio 93.5FM,https://zeno.fm/radio/yagrtoradio93-5fm/,Kurdish/Arabic/English,Local / Mixed
-Khak Radio 99.1,https://zeno.fm/radio/khak-radio/,Kurdish,Entertainment / Music
-Kurd Music FM,https://zeno.fm/radio/kurd-music-fm/,Kurdish,Music
-Nhel Radio,https://zeno.fm/radio/nhel-radio-nl-rady-rmkk/,Kurdish,Folklore / Cultural
-Kurdish Voice Radio,https://zeno.fm/radio/kurdishvoiceradio/,Kurdish/English,Diaspora / Community
-Radio Slemani,https://zeno.fm/radio/radio-slemani/,Kurdish,Local / Music
-Rudaw Radio,https://www.rudaw.net/english/onair/radio/live/,Kurdish,Local / Music
+name,stream
+Radio Duhok 88.9,http://95.170.86.37:8000/duhok
+Radio Slemani,https://radioking.com/play/radioslemani
+Dengi Kurdsat,https://cast2.radiohost.us:2199/tunein/kurdishsataac.pls
+Shady FM Kurdish,http://cast.radiospinner.com:8012/live
+Radio Shafaq Kurdish,http://s1.voscast.com:9638/
