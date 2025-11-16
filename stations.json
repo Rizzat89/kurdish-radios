@@ -13,7 +13,8 @@
   { "name": "Nhel Radio", "stream": "https://zeno.fm/radio/nhel-radio-nl-rady-rmkk/", "language": "Kurdish", "notes": "Folklore / Cultural" },
   { "name": "Kurdish Voice Radio", "stream": "https://zeno.fm/radio/kurdishvoiceradio/", "language": "Kurdish / English", "notes": "Diaspora / Community" },
   { "name": "Radio Slemani", "stream": "https://zeno.fm/radio/radio-slemani/", "language": "Kurdish", "notes": "Local / Music" },
-  { "name": "Rudaw Radio", stream: "https://www.rudaw.net/english/onair/radio/live", "language": "Kurdish", "notes": "Local / Music" }
+  { "name": "Rudaw Radio", "stream": "https://www.rudaw.net/english/onair/radio/live", "language": "Kurdish", "notes": "Local / Music" }
 ]
+
 
 
