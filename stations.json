@@ -1,20 +1,7 @@
 [
-  { "name": "K4ro FM", "stream": "https://zeno.fm/radio/k4ro-fm/", "language": "Kurdish", "notes": "Music / Hits" },
-  { "name": "Govend", "stream": "https://zeno.fm/radio/govend/", "language": "Kurdish", "notes": "Folk / Traditional" },
-  { "name": "Svan Perwer Radio", "stream": "https://zeno.fm/radio/svan-perwer/", "language": "Kurdish", "notes": "Artist / Folk" },
-  { "name": "Radio Duhok 88.9", "stream": "https://zeno.fm/radio/radio-duhok-88-9/", "language": "Kurdish", "notes": "News / Talk" },
-  { "name": "Dawat Radio", "stream": "https://zeno.fm/radio/dawat-radio/", "language": "Kurdish", "notes": "Religious / Culture" },
-  { "name": "Welat FM", "stream": "https://zeno.fm/radio/welat-fm/", "language": "Kurdish", "notes": "Music / General" },
-  { "name": "Dengi Kurdsat", "stream": "https://zeno.fm/radio/dengi-kurdsat/", "language": "Kurdish", "notes": "News / Talk" },
-  { "name": "Shady FM Kurdish", "stream": "https://zeno.fm/radio/shady-fm-kurdish/", "language": "Kurdish", "notes": "General / Music" },
-  { "name": "Yagrto Radio 93.5FM", "stream": "https://zeno.fm/radio/yagrtoradio93-5fm/", "language": "Kurdish, Arabic, English", "notes": "Local / Mixed" },
-  { "name": "Khak Radio 99.1", "stream": "https://zeno.fm/radio/khak-radio/", "language": "Kurdish", "notes": "Entertainment / Music" },
-  { "name": "Kurd Music FM", "stream": "https://zeno.fm/radio/kurd-music-fm/", "language": "Kurdish", "notes": "Music" },
-  { "name": "Nhel Radio", "stream": "https://zeno.fm/radio/nhel-radio-nl-rady-rmkk/", "language": "Kurdish", "notes": "Folklore / Cultural" },
-  { "name": "Kurdish Voice Radio", "stream": "https://zeno.fm/radio/kurdishvoiceradio/", "language": "Kurdish / English", "notes": "Diaspora / Community" },
-  { "name": "Radio Slemani", "stream": "https://zeno.fm/radio/radio-slemani/", "language": "Kurdish", "notes": "Local / Music" },
-  { "name": "Rudaw Radio", "stream": "https://www.rudaw.net/english/onair/radio/live", "language": "Kurdish", "notes": "Local / Music" }
+  {"name": "Radio Duhok 88.9", "stream": "http://95.170.86.37:8000/duhok"},
+  {"name": "Radio Slemani", "stream": "https://radioking.com/play/radioslemani"},
+  {"name": "Dengi Kurdsat", "stream": "https://cast2.radiohost.us:2199/tunein/kurdishsataac.pls"},
+  {"name": "Shady FM Kurdish", "stream": "http://cast.radiospinner.com:8012/live"},
+  {"name": "Radio Shafaq Kurdish", "stream": "http://s1.voscast.com:9638/"}
 ]
-
-
-
