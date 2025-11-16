@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kurdish Radio Directory</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #fafafa; }
+    h1 { text-align: center; }
+    .station { margin-bottom: 20px; padding: 12px; border: 1px solid #ddd; border-radius: 12px; background: #fff; }
+    .station strong { display: block; margin-bottom: 8px; font-size: 18px; }
+    audio { width: 100%; margin-top: 6px; }
+    #search {
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kurdish / Iraqi-Kurdish Radio</h1>
+  <input type="text" id="search" placeholder="Search stations…" />
+
+  <div id="stations"></div>
+
+  <script>
+    const stations = [
+      {name: "K4ro FM", stream: "https://zeno.fm/radio/k4ro-fm/"},
+      {name: "Govend", stream: "https://zeno.fm/radio/govend/"},
+      {name: "Svan Perwer Radio", stream: "https://zeno.fm/radio/svan-perwer/"},
+      {name: "Radio Duhok 88.9", stream: "https://zeno.fm/radio/radio-duhok-88-9/"},
+      {name: "Dawat Radio", stream: "https://zeno.fm/radio/dawat-radio/"},
+      {name: "Welat FM", stream: "https://zeno.fm/radio/welat-fm/"},
+      {name: "Dengi Kurdsat", stream: "https://zeno.fm/radio/dengi-kurdsat/"},
+      {name: "Shady FM Kurdish", stream: "https://zeno.fm/radio/shady-fm-kurdish/"},
+      {name: "Yagrto Radio 93.5FM", stream: "https://zeno.fm/radio/yagrtoradio93-5fm/"},
+      {name: "Khak Radio 99.1", stream: "https://zeno.fm/radio/khak-radio/"},
+      {name: "Kurd Music FM", stream: "https://zeno.fm/radio/kurd-music-fm/"},
+      {name: "Nhel Radio", stream: "https://zeno.fm/radio/nhel-radio-nl-rady-rmkk/"},
+      {name: "Kurdish Voice Radio", stream: "https://zeno.fm/radio/kurdishvoiceradio/"},
+      {name: "Radio Slemani", stream: "https://zeno.fm/radio/radio-slemani/"}
+    ];
+
+    const container = document.getElementById('stations');
+    const searchInput = document.getElementById('search');
+
+    function renderStations(filter = "") {
+      container.innerHTML = "";
+      stations
+        .filter(st => st.name.toLowerCase().includes(filter.toLowerCase()))
+        .forEach(st => {
+          const div = document.createElement('div');
+          div.className = 'station';
+          div.innerHTML = `<strong>${st.name}</strong>
+            <audio controls src="${st.stream}"></audio>`;
+          container.appendChild(div);
+        });
+    }
+
+    searchInput.addEventListener('input', () => {
+      renderStations(searchInput.value);
+    });
+
+    // Initial render
+    renderStations();
+  </script>
+</body>
+</html>
