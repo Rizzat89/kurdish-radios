@@ -22,27 +22,17 @@
 </head>
 <body>
   <h1>Kurdish / Iraqi-Kurdish Radio</h1>
+  <label for="search" style="display:none;">Search stations</label>
   <input type="text" id="search" placeholder="Search stations…" />
-
   <div id="stations"></div>
-
   <script>
+    // Direct stream URLs that work with <audio>
     const stations = [
-      {name: "K4ro FM", stream: "https://zeno.fm/radio/k4ro-fm/"},
-      {name: "Govend", stream: "https://zeno.fm/radio/govend/"},
-      {name: "Svan Perwer Radio", stream: "https://zeno.fm/radio/svan-perwer/"},
-      {name: "Radio Duhok 88.9", stream: "https://zeno.fm/radio/radio-duhok-88-9/"},
-      {name: "Dawat Radio", stream: "https://zeno.fm/radio/dawat-radio/"},
-      {name: "Welat FM", stream: "https://zeno.fm/radio/welat-fm/"},
-      {name: "Dengi Kurdsat", stream: "https://zeno.fm/radio/dengi-kurdsat/"},
-      {name: "Shady FM Kurdish", stream: "https://zeno.fm/radio/shady-fm-kurdish/"},
-      {name: "Yagrto Radio 93.5FM", stream: "https://zeno.fm/radio/yagrtoradio93-5fm/"},
-      {name: "Khak Radio 99.1", stream: "https://zeno.fm/radio/khak-radio/"},
-      {name: "Kurd Music FM", stream: "https://zeno.fm/radio/kurd-music-fm/"},
-      {name: "Nhel Radio", stream: "https://zeno.fm/radio/nhel-radio-nl-rady-rmkk/"},
-      {name: "Kurdish Voice Radio", stream: "https://zeno.fm/radio/kurdishvoiceradio/"},
-      {name: "Radio Slemani", stream: "https://zeno.fm/radio/radio-slemani/"},
-      {name: "Rudaw Radio", stream: "https://www.rudaw.net/english/onair/radio/live"}
+      {name: "Radio Duhok 88.9", stream: "http://95.170.86.37:8000/duhok"}, // Example from Duhok Kurdish channel [web:2][web:3]
+      {name: "Radio Slemani", stream: "https://radioking.com/play/radioslemani"}, // Example from Slemani Kurdish radio [web:4]
+      {name: "Dengi Kurdsat", stream: "https://cast2.radiohost.us:2199/tunein/kurdishsataac.pls"}, // Dengi Kurdsat live [web:5][web:9]
+      {name: "Shady FM Kurdish", stream: "http://cast.radiospinner.com:8012/live"}, // Shady FM from online directories [web:3][web:9]
+      {name: "Radio Shafaq Kurdish", stream: "http://s1.voscast.com:9638/"} // Shafaq Kurdish [web:1][web:3]
     ];
 
     const container = document.getElementById('stations');
@@ -50,25 +40,25 @@
 
     function renderStations(filter = "") {
       container.innerHTML = "";
-      stations
-        .filter(st => st.name.toLowerCase().includes(filter.toLowerCase()))
-        .forEach(st => {
-          const div = document.createElement('div');
-          div.className = 'station';
-          div.innerHTML = `<strong>${st.name}</strong>
-            <audio controls src="${st.stream}"></audio>`;
-          container.appendChild(div);
-        });
+      const filtered = stations.filter(st => st.name.toLowerCase().includes(filter.toLowerCase()));
+      if (filtered.length === 0) {
+        container.innerHTML = "<p>No stations found.</p>";
+        return;
+      }
+      filtered.forEach(st => {
+        const div = document.createElement('div');
+        div.className = 'station';
+        div.innerHTML = `<strong>${st.name}</strong>
+          <audio controls src="${st.stream}" preload="none"></audio>`;
+        container.appendChild(div);
+      });
     }
 
     searchInput.addEventListener('input', () => {
       renderStations(searchInput.value);
     });
 
-    // Initial render
     renderStations();
   </script>
 </body>
 </html>
-
-
